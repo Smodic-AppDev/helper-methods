@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   def new
     @the_movie = Movie.new
 
-    render template: "movies/new.html.erb"
+    #render template: "movies/new.html.erb" Not needed based Rails assumptions
   end
 
   def index
@@ -16,7 +16,7 @@ class MoviesController < ApplicationController
       end
 
       format.html do
-        render template: "movies/index.html.erb"
+        #render template: "movies/index.html.erb"  Not needed based on Rails assumptions
       end
     end
   end
@@ -28,7 +28,7 @@ class MoviesController < ApplicationController
 
     @the_movie = matching_movies.first
 
-    render template: "movies/show.html.erb"
+    #render template: "movies/show.html.erb"  Not needed based on Rails assumptions
   end
 
   def create
@@ -40,7 +40,7 @@ class MoviesController < ApplicationController
       @the_movie.save
       redirect_to movies_url, notice: "Movie created successfully."
     else
-      render template: "movies/new.html.erb"
+      render "new" # matches controller name but doesn't match action so tempalte name is needed
     end
   end
 
@@ -51,7 +51,7 @@ class MoviesController < ApplicationController
 
     @the_movie = matching_movies.first
 
-    render template: "movies/edit.html.erb"
+    #render template: "movies/edit.html.erb"  Not needed based on Rails assumptions
   end
 
   def update
