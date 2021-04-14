@@ -15,10 +15,9 @@ class MoviesController < ApplicationController
         render json: @list_of_movies
       end
 
-      format.html do
+      format.html
         #render template: "movies/index.html.erb"  Not needed based on Rails assumptions
       end
-    end
   end
 
   def show
