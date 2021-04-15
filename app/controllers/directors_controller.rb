@@ -33,7 +33,7 @@ class DirectorsController < ApplicationController
     @director.name = params.fetch(:name)
     @director.dob = params.fetch(:dob)
     @director.bio = params.fetch(:bio)
-    #director_attributes = params.require(:director).permit(:name, :dob, :bio )
+    #director_attributes = params.fetch(:director).permit(:name, :dob, :bio )
     #@director = @director.update(director_attributes)
 
 
