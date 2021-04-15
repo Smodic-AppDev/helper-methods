@@ -10,7 +10,7 @@
 
     <%= label_tag :title, "Title" %>
 
-    <%= text_field_tag :title, @movie.title, id: "title" %>
+    <%= text_field_tag "movie[title]", @movie.title, id: "title" %>
 
   </div>
 
@@ -18,7 +18,7 @@
 
     <%= label_tag :description, "Description" %>
 
-    <%= text_area_tag :description, @movie.description, id: "description", rows: 3 %>
+    <%= text_area_tag "movie[description]", @movie.description, id: "description", rows: 3 %>
 
   </div>
 
